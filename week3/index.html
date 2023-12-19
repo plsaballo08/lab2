@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Personal Profile</title>
+    <title id = "title">Personal Profile</title>
     <link rel="icon" href="Images/logo.png" type="image/x-icon">
     <style>
         body {
@@ -10,14 +10,19 @@
             font-family: 'Bahnschrift'; 
             text-align: center;
         }
+
+        .hyperlink {
+            display: inline-block; 
+            margin-right: 3px; 
+        }
     </style>
 </head>
 
 <body>
     <div>
-        <h1>Personal Profile</h1>
+        <h1 id = "headerProfile">Personal Profile</h1>
 
-        <h2>About Me:</h2>
+        <h2 id = "about">About Me:</h2>
 
         <p>
             Hi, My name is <b><span style="border: 1px solid rgb(47, 55, 164)">Paul Lawrence Saballo</span></b> and you can call me <b>Paul</b>. <br>
@@ -28,13 +33,20 @@
 
         <img src = "Images/spotify.PNG" alt="Spotify" width = "700" height="350" ><br><br><br>
 
-        <a href="https://github.com/plsaballo08" target="https://github.com/plsaballo08">
+        <div class = "hyperlink">
+            <a href="https://github.com/plsaballo08" target="https://github.com/plsaballo08">
             <img src= "Images/github-logo.png" alt="Github" width="40" height="40"> 
-        </a>
+            </a>
 
-        <a href="https://www.facebook.com/saballo0805/" target="https://www.facebook.com/saballo0805/">
+        </div>
+        
+        <div class = "hyperlink">
+            <a href="https://www.facebook.com/saballo0805/" target="https://www.facebook.com/saballo0805/">
             <img src= "Images/fb.png" alt ="Facebook" width = "40" height="40">
-        </a>
+            </a>
+
+        </div>
+        
     
     </div>
 </body>
