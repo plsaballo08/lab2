@@ -10,46 +10,104 @@
             font-family: 'Bahnschrift'; 
             text-align: center;
         }
+        
+        #about {
+        text-align: left;
+        font-size: 30px;
+        }
+        
+        #headerProfile {
+            font-size: 50px;
+        }
+
+        #info {
+        text-align: left;
+        font-size: 20px;
+        }
 
         .hyperlink {
             display: inline-block; 
             margin-right: 3px; 
         }
+
+        nav {
+            float: left;
+            text-align: left;
+            width: 30%;
+            height: 205px; 
+            background: #000000;
+            margin-top: 130px;
+            margin-left: 300px;
+        
+       }
+
+       .imgRound {
+        border-radius: 10%;
+        float: left;
+        margin-top: 25px;
+        margin-left: 30px;
+        }
+
+        .topMargin {
+            margin-top: 550px;
+        }
+
+       
+
     </style>
 </head>
 
 <body>
     <!-- Profile Information -->
     <div>
-        <h1 id = "headerProfile">Personal Profile</h1>
+        <header>
+            <h1 id = "headerProfile"> Personal Profile</h1>
+        </header>
 
-        <h2 id = "about">About Me:</h2>
+        <div>
+            <section>
+                <nav>
+                    <h2 id = "about">About Me:</h2>
+                    <p id = "info">
+                        Hi, My name is <b> Paul Lawrence Saballo </b> and you can call me <b>Paul</b>. 
+                        I'm <b>20 years old,</b> born on August 5, 2003. I graduated senior high at <b>University of Makati</b>.
+                        My hobbies include playing video games, watching anime or dramas, and listening to music.
+                    </p> 
+            
+                </nav>
+            </section>
 
-        <p>
-            Hi, My name is <b><span style="border: 1px solid rgb(47, 55, 164)">Paul Lawrence Saballo</span></b> and you can call me <b>Paul</b>. <br>
-            I'm <b>20 years old,</b> born on August 5, 2003. I graduated senior high at <b>University of Makati</b>. <br>
-            My hobbies include playing video games, watching anime or dramas, and listening to music.
-        </p> 
+            <article>
+                <img class = "imgRound" src = "Images/pic.jpg" alt="Profile" height="500" > <br> <br>
+            </article> 
+        </div>
+        
+         <!-- Images -->
+        <div class = "topMargin">
+            <img src = "Images/spotify.PNG" alt="Spotify" width = "700" height="350" ><br><br><br>
+        </div>
 
-        <!-- Images -->
-        <img src = "Images/spotify.PNG" alt="Spotify" width = "700" height="350" ><br><br><br>
+       
 
 
         <!-- Images with hyperlink -->
-        <div class = "hyperlink">
-            <a href="https://github.com/plsaballo08" target="https://github.com/plsaballo08">
-            <img src= "Images/github-logo.png" alt="Github" width="40" height="40"> 
-            </a>
+        <footer>
+            <div class = "hyperlink">
+                <a href="https://github.com/plsaballo08" target="https://github.com/plsaballo08">
+                <img src= "Images/github-logo.png" alt="Github" width="40" height="40"> 
+                </a>
+    
+            </div>
+            
+            <div class = "hyperlink">
+                <a href="https://www.facebook.com/saballo0805/" target="https://www.facebook.com/saballo0805/">
+                <img src= "Images/fb.png" alt ="Facebook" width = "40" height="40">
+                </a>
+    
+            </div> 
 
-        </div>
-        
-        <div class = "hyperlink">
-            <a href="https://www.facebook.com/saballo0805/" target="https://www.facebook.com/saballo0805/">
-            <img src= "Images/fb.png" alt ="Facebook" width = "40" height="40">
-            </a>
-
-        </div>
-        
+        </footer>
+       
     
     </div>
 </body>
