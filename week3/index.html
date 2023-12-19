@@ -24,7 +24,15 @@
             text-align: left;
             font-size: 50px;
         }
+
         
+       .container {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        text-align: center;
+        }
+
         #headerProfile {
             text-align: left;
             color:#7DE2D1;
@@ -34,7 +42,7 @@
 
         #info {
             float: center;
-            font-size: 20px;
+            font-size: 18px;
         }
 
         .hyperlink {
@@ -51,7 +59,6 @@
             background: #000000;
             margin-top: 130px;
             margin-left: 300px;
-        
        }
 
        .imgRound {
@@ -62,20 +69,34 @@
         }
 
         .topMargin {
-            margin-top: 550px;
+            margin-top: 50px;
         }
 
        .tiffanyBlue {
         color: #7DE2D1;
-
        }
+
+       .quote {
+            text-align: center;
+            color:#ffffff;
+            font-size: 25px;
+            margin-left: 100px;
+       }
+       .author{
+            text-align: right;
+            color:#ffffff;
+            font-size: 25px; 
+            margin-left: 30px;
+       }
+
+       
 
     </style>
 </head>
 
 <body>
     <!-- Profile Information -->
-    <div>
+    <div class = "container">
         <header>
             <h1 id = "headerProfile"> My Profile</h1>
         </header>
@@ -83,11 +104,13 @@
         <div>
             <section>
                 <nav>
+                   
                     <h2 id = "about">About Me:</h2>
                     <h3 id = "name">Paul Lawrence Saballo</h2>
                     <p id = "info">
                         You can call me <b><span class= "tiffanyBlue"> Paul</b>.</span> 
-                        I'm <b>20 years old,</b> born on August 5, 2003. I graduated senior high at <b>University of Makati</b>.
+                        I'm <b>20 years old,</b> born on August 5, 2003. I graduated senior high at <b>University of Makati</b> and currently 
+                        stuying at <b>Asia Pacific College</b>.
                         My hobbies include playing video games, watching anime or dramas, and listening to music.
                     </p> 
 
@@ -96,11 +119,17 @@
                 </nav>
                 <img class = "imgRound" src = "Images/me.png" alt="Profile" height="550" > <br> <br>
             </section>
-
-                
-          
         </div>
         
+        <div class = "topMargin">
+            <aside>
+                <h2 id = "quote"> &quotAll battles in life serve to teach us something, even the battles we lose.&quot <br> </h2>
+                <h2 id = "author">-Paulo Coelho</h2>
+        
+            </aside>
+        </div>
+        
+
          <!-- Images -->
         <div class = "topMargin">
             <img src = "Images/spotify.PNG" alt="Spotify"  height="350" ><br><br><br>
