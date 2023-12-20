@@ -12,43 +12,65 @@
             font-family: 'Bahnschrift'; 
         }
 
-        
+        #intro {
+         
+            text-align: left;
+            font-size: 70px;
+            margin-top: 270px;
+            margin-left: 200px;
+            margin-bottom: 190px;
+        }
+
         #about {
             color:#ffffff;
             text-align: left;
-            font-size: 30px;
-        }
-
-        #name {
-            color:#7DE2D1;
-            text-align: left;
             font-size: 50px;
+            margin-top: -20px;
+            margin-left: 200px;
+            
         }
 
-        
+        #info {
+            text-align: left;
+            font-size: 20px;
+            margin-left: 200px;
+        }
+
        .container {
         display: flex;
         flex-direction: column;
         align-items: left;
-        text-align: center;
+        text-align: left;
         }
 
-        #headerProfile {
+        #headerProfile1 {
             text-align: left;
             color:#7DE2D1;
             font-size: 30px;
-            margin-left: 30px;
+            margin-left: 70px;
         }
 
-        #info {
-            float: center;
-            font-size: 18px;
+        #headerProfile2 {
+            text-align: left;
+            color:#7DE2D1;
+            font-size: 50px;
+            margin-top: 50px;
+            margin-left: 50px;
         }
-
+        
+        .hobbies {
+            text-align: left;
+            margin-top: 100px;
+            margin-left: 140px;
+        }
+        
+        .hobbies2 {
+            margin-left: 40px;
+        }
         .hyperlink {
             text-align: center;
             display: inline-block; 
-            margin-right: 7px; 
+            margin-right: 10px; 
         }
 
         nav {
@@ -65,11 +87,16 @@
             border-radius: 10%;
             float: left;
             margin-top: 25px;
-            margin-left: 30px;
+            margin-left: 150px;
         }
 
         .topMargin {
             margin-top: 50px;
+        }
+
+        .infoLeft {
+            margin-top: 100px;
+            margin-left: -300px;
         }
 
        .tiffanyBlue {
@@ -89,6 +116,10 @@
             margin-left: 30px;
        }
 
+       .footer{
+        text-align: center;
+       }
+
        
 
     </style>
@@ -97,62 +128,60 @@
 <body>
     <!-- Profile Information -->
     <div class = "container">
-        <header>
-            <h1 id = "headerProfile"> My Profile</h1>
-        </header>
+       
         <div>
-            <section>
+            <p id = "intro"> Hi, I'm <b><span class= "tiffanyBlue">Paul</span> <br>Lawrence Saballo</p>
+        </div>
+
+        <div>
+            <section class = "infoLeft">
                 <nav>
                     <h2 id = "about">About Me:</h2>
-                    <h3 id = "name">Paul Lawrence Saballo</h2>
                     <p id = "info">
-                        You can call me <b><span class= "tiffanyBlue"> Paul</b>.</span> 
-                        I'm <b>20 years old,</b> born on August 5, 2003. I graduated senior high at <b>University of Makati</b> and currently 
-                        stuying at <b>Asia Pacific College</b>.
-                        My hobbies include playing video games, watching anime or dramas, and listening to music.
-                    </p> 
-
-            
+                        You can call me <b><span class= "tiffanyBlue"> Paul</b>.</span>
+                        I'm <b>20 years old,</b> born on August 5, 2003. I graduated senior high at the <b>University of Makati</b> and currently 
+                        studying at <b>Asia Pacific College with the course of BSIT-MI</b>.
                     
+                    </p> 
                 </nav>
-
-                <!-- Picture -->
-                <img class = "imgRound" src = "Images/me.png" alt="Profile" height="550" > <br> <br>
             </section>
-        </div>
-        
-        <!-- Quote -->
-        <div class = "topMargin">
-            <aside>
-                <h2 id = "quote"> &quotAll battles in life serve to teach us something, even the battles we lose.&quot <br> </h2>
-                <h2 id = "author">-Paulo Coelho</h2>
-            </aside>
-        </div>
-        
-         <!-- Images -->
-        <div class = "topMargin"> 
-            <img src = "Images/spotify.PNG" alt="Spotify"  height="350" ><br><br><br>
+
+            <!-- Picture -->
+            <img class = "imgRound" src = "Images/pic.jpg" alt="Profile" height="500" > <br> 
         </div>
 
+    </div>
        
-
+        
+         <!-- Hobbies -->
+        <div class = "hobbies"> 
+            <header>
+                <h1 id = "headerProfile2"> Hobbies</h1>
+            </header>
+            <aside class = "hobbies2">
+                <img src = "Images/spotify.PNG" alt="Spotify"  height="300" ><br><br><br>
+            </aside>
+            
+        </div>
 
         <!-- Images with hyperlink -->
         <footer>
-            <div class = "hyperlink">
-                <a href="https://github.com/plsaballo08" target="https://github.com/plsaballo08">
-                <img src= "Images/github-logo.png" alt="Github" width="40" height="40"> 
-                </a>
-    
-            </div>
-            
-            <div class = "hyperlink">
-                <a href="https://www.facebook.com/saballo0805/" target="https://www.facebook.com/saballo0805/">
-                <img src= "Images/fb.png" alt ="Facebook" width = "40" height="40">
-                </a>
-    
-            </div> 
+            <div class = "footer">
 
+                <div class = "hyperlink">
+                    <a href="https://github.com/plsaballo08" target="https://github.com/plsaballo08">
+                    <img src= "Images/github-logo.png" alt="Github" width="40" height="40"> 
+                    </a>
+                </div>
+
+                <div class = "hyperlink">
+                    <a href="https://www.facebook.com/saballo0805/" target="https://www.facebook.com/saballo0805/">
+                    <img src= "Images/fb.png" alt ="Facebook" width = "40" height="40">
+                    </a>
+
+                 </div>
+                  
+            </div>
         </footer>
        
     
