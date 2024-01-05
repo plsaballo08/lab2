@@ -1,0 +1,115 @@
+*{
+        color: white;
+        font-family: 'Bahnschrift'; 
+    
+}
+body {
+    background-color: #000000;
+
+}
+#intro {
+    text-align: left;
+    font-size: 70px;
+    margin-top: 270px;
+    margin-left: 200px;
+    margin-bottom: 190px;
+}
+
+#about {
+    color:#ffffff;
+    text-align: left;
+    font-size: 50px;
+    margin-top: -20px;
+    margin-left: 200px;   
+}
+
+#info {
+    text-align: left;
+    font-size: 20px;
+    margin-left: 200px;
+    }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+}
+
+#headerProfile1 {
+        text-align: left;
+        color:#7DE2D1;
+        font-size: 30px;
+        margin-left: 70px;
+    }
+
+    #headerProfile2 {
+        text-align: left;
+        color:#7DE2D1;
+        font-size: 50px;
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+    
+    .hobbies {
+        text-align: left;
+        margin-top: 100px;
+        margin-left: 140px;
+    }
+    
+    .hobbies2 {
+        margin-left: 40px;
+    }
+    .hyperlink {
+        text-align: center;
+        display: inline-block; 
+        margin-right: 10px; 
+    }
+
+    nav {
+        float: left;
+        text-align: left;
+        width: 30%;
+        height: 205px; 
+        background: #000000;
+        margin-top: 130px;
+        margin-left: 300px;
+   }
+
+   .imgRound {
+        border-radius: 10%;
+        float: left;
+        margin-top: 25px;
+        margin-left: 150px;
+    }
+
+    .topMargin {
+        margin-top: 50px;
+    }
+
+    .infoLeft {
+        margin-top: 100px;
+        margin-left: -300px;
+    }
+
+   .tiffanyBlue {
+    color: #7DE2D1;
+   }
+
+   .quote {
+        text-align: center;
+        color:#ffffff;
+        font-size: 25px;
+        margin-left: 100px;
+   }
+   .author{
+        text-align: right;
+        color:#ffffff;
+        font-size: 25px; 
+        margin-left: 30px;
+   }
+
+   .footer{
+    text-align: center;
+   }
+
