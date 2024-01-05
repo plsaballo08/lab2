@@ -54,12 +54,19 @@ body {
     .hobbies {
         text-align: left;
         margin-top: 100px;
-        margin-left: 140px;
+        margin-left: 140px;  
     }
-    
+
     .hobbies2 {
+        
         margin-left: 40px;
     }
+
+    .hobbies3 {
+        display: flex;
+        margin-left: 40px;
+    }
+
     .hyperlink {
         text-align: center;
         display: inline-block; 
@@ -112,4 +119,12 @@ body {
    .footer{
     text-align: center;
    }
+
+   .quote {
+    margin-top: 50px;
+   }
+
+   .attribution {
+    float: center;
+}
 
