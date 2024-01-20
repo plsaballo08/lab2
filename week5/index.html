@@ -10,11 +10,13 @@
     <script src="about.js"></script>
     <script src="introHeader.js"></script>
     <script src="hobMusic.js"></script>
+    
 </head>
 
 <p id="personalWebsite"></p>
 
 <body>
+
     <!-- Profile Information -->
     <div class="container">
         <div id="intro">
@@ -76,7 +78,7 @@
                 <img class="imgRound" src="Images/pic.jpg" alt="Profile" height="500">
             </div>
         </div>
-        <div class="quote" id = "quote">
+        <div class="quote" id="quote">
             <script>
                 class AuthorName {
                     constructor(fname, lname) {
@@ -84,14 +86,14 @@
                         this.lname = lname;
                     }
                 }
-        
+
                 const name1 = new AuthorName("Paulo", "Coelho");
                 document.getElementById("quote").innerHTML =
                     '“All battles in life serve to teach us something, even the battles we lose.”<br>' +
                     '<span class="attribution"> – ' + name1.fname + ' ' + name1.lname + '</span>';
             </script>
         </div>
-        
+
 
 
         <!-- Hobbies -->
@@ -181,7 +183,16 @@
 
 
         </div>
-
+        <button class="back-button" onclick="goBack()">
+            <img src="Images/up-button.png" alt="Back" width="30" height="30">
+        </button>
+    
+        <script>
+            function goBack() {
+                // Scroll to the top of the page
+                window.scrollTo(0, 0);
+            }
+        </script>
 
 </body>
 
