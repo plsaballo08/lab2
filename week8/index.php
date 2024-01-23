@@ -47,7 +47,8 @@
                         <p id="info">
                             <?php
                             $name = "Paul";
-                           
+                            echo "You can call me <b><span class=\"tiffanyBlue\">$name</span></b>.";
+                            echo "I'm <span id=\"age\"></span><b> years old</b> born on <span id=\"birthdate\"></span>.";
                             ?>
                         </p>
 
