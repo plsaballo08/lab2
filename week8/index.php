@@ -104,9 +104,11 @@
                 const name1 = new AuthorName("Paulo", "Coelho");
 
                 <?php
+                $fname = "Paulo";
+                $lname = "Coelho";
                 function getQuote()
                 {
-                    echo "All battles in life serve to teach us something, even the battles we lose.<br>";
+                    return "All battles in life serve to teach us something, even the battles we lose.<br>";
                 }
                 ?>
 
@@ -117,6 +119,7 @@
                     '<span class="attribution"> – ' + name1.fname + ' ' + name1.lname + '</span>';
             </script>
         </div>
+
 
 
 
