@@ -54,9 +54,20 @@
 
 
                         <script>
-                            let x = 20;
+                            <?php
+                            $x = 20;
+
+                            function myAge()
+                            {
+                                echo 'var x = ' . $GLOBALS['x'] . ';';
+                            }
+
+                            myAge();
+                            ?>
+
                             document.getElementById("age").innerHTML = "<strong>" + x + "</strong>";
                         </script>
+
 
                         <script>
                             const d = new Date("August 5, 2003");
