@@ -91,11 +91,23 @@
                 }
 
                 const name1 = new AuthorName("Paulo", "Coelho");
+
+                <?php
+                function getQuote()
+                {
+                    echo "All battles in life serve to teach us something, even the battles we lose.<br>";
+                }
+                ?>
+
+                dynamicQuote = "<?php echo getQuote(); ?>";
+
                 document.getElementById("quote").innerHTML =
-                    '“All battles in life serve to teach us something, even the battles we lose.”<br>' +
+                    '<span class="quote-text">' + dynamicQuote + '</span>' +
                     '<span class="attribution"> – ' + name1.fname + ' ' + name1.lname + '</span>';
             </script>
         </div>
+
+
 
         <!-- Hobbies -->
 
