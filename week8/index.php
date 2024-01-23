@@ -10,7 +10,7 @@
     <script src="about.js"></script>
     <script src="introHeader.js"></script>
     <script src="hobMusic.js"></script>
-    
+
 </head>
 
 <p id="personalWebsite"></p>
@@ -45,10 +45,12 @@
                         <h2 id="about"> About Me:</h2>
 
                         <p id="info">
-                            You can call me <b><span class="tiffanyBlue"> Paul</span></b>.
-                            I'm <span id="age"></span>
-                            <b> years old</b> born on <span id="birthdate"></span>.
+                            <?php
+                            $name = "Paul";
+                           
+                            ?>
                         </p>
+
 
                         <script>
                             let x = 20;
@@ -184,7 +186,7 @@
         <button class="back-button" onclick="goBack()">
             <img src="Images/up-button.png" alt="Back" width="30" height="30">
         </button>
-    
+
         <script>
             function goBack() {
                 // Scroll to the top of the page
