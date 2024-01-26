@@ -10,6 +10,7 @@
     <script src="about.js"></script>
     <script src="introHeader.js"></script>
     <script src="hobMusic.js"></script>
+    
 
 </head>
 
@@ -194,6 +195,69 @@
 
         <div class="footer">
             <footer>
+
+                <div class="form-container">
+                    <?php
+                    
+                    $emailErr = $commentErr = "";
+                    $email = $comment = "";
+
+                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                        if (empty($_POST["email"])) {
+                            $emailErr = "Email is required";
+                        } else {
+                            $email = test_input($_POST["email"]);
+                            // check if e-mail address is well-formed
+                            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                                $emailErr = "Invalid email format";
+                            }
+                        }
+
+                        if (empty($_POST["comment"])) {
+                            $commentErr = "";
+                        } else {
+                            $comment = test_input($_POST["comment"]);
+                        }
+                    }
+
+                    function test_input($data)
+                    {
+                        $data = trim($data);
+                        $data = stripslashes($data);
+                        $data = htmlspecialchars($data);
+                        return $data;
+                    }
+                    ?>
+
+                    <h2>PHP Form Validation Example</h2>
+                    <p><span class="error">* required field</span></p>
+                    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        E-mail: <input type="text" name="email" value="<?php echo $email; ?>" style="color: #000000;">
+                        <span class="error">*
+                            <?php echo $emailErr; ?>
+                        </span>
+                        <br><br>
+                        Comment: <textarea name="comment" rows="5" cols="40"style="color: #000000;"><?php echo $comment; ?></textarea>
+                        <br><br>
+                        <div class ="#submit"> 
+                        <input type="submit" name="submit" value="Submit" style="border-radius: 30px; padding: 13px 30px; background-color: #7DE2D1; color: #000000;">
+                        </div>
+
+
+                    </form>
+
+                    <?php
+                    echo "<h2>Your Input:</h2>";
+                    echo "<br>";
+                    echo $email;
+                    echo "<br>";
+                    echo $comment;
+                    echo "<br>";
+                    echo "<br>";
+                    echo "<br>";
+                    ?>
+                </div>
+
                 <div class="hyperlink">
                     <a href="https://github.com/plsaballo08" target="_blank">
                         <img src="Images/github-logo.png" alt="Github" width="40" height="40">
@@ -205,11 +269,9 @@
                         <img src="Images/fb.png" alt="Facebook" width="40" height="40">
                     </a>
                 </div>
-
             </footer>
-
-
         </div>
+
         <button class="back-button" onclick="goBack()">
             <img src="Images/up-button.png" alt="Back" width="30" height="30">
         </button>
@@ -220,6 +282,7 @@
                 window.scrollTo(0, 0);
             }
         </script>
+
 
 </body>
 
