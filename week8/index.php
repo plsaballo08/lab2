@@ -10,7 +10,7 @@
     <script src="about.js"></script>
     <script src="introHeader.js"></script>
     <script src="hobMusic.js"></script>
-    
+
 
 </head>
 
@@ -198,7 +198,7 @@
 
                 <div class="form-container">
                     <?php
-                    
+
                     $emailErr = $commentErr = "";
                     $email = $comment = "";
 
@@ -229,21 +229,24 @@
                     }
                     ?>
 
-                    <h2>PHP Form Validation Example</h2>
+                    <!-- PHP -->
+
+                    <h2>Feedback Form</h2>
                     <p><span class="error">* required field</span></p>
                     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                        E-mail: <input type="text" name="email" value="<?php echo $email; ?>" style="color: #000000;">
+                        E-mail: <input type="text" name="email" value="<?php echo htmlspecialchars($email); ?>"
+                            style="color: #000000;">
                         <span class="error">*
                             <?php echo $emailErr; ?>
                         </span>
                         <br><br>
-                        Comment: <textarea name="comment" rows="5" cols="40"style="color: #000000;"><?php echo $comment; ?></textarea>
+                        Comment: <textarea name="comment" rows="5" cols="40"
+                            style="color: #000000;"><?php echo htmlspecialchars($comment); ?></textarea>
                         <br><br>
-                        <div class ="#submit"> 
-                        <input type="submit" name="submit" value="Submit" style="border-radius: 30px; padding: 13px 30px; background-color: #7DE2D1; color: #000000;">
+                        <div class="submit">
+                            <input type="submit" name="submit" value="Submit"
+                                style="border-radius: 30px; padding: 13px 30px; background-color: #7DE2D1; color: #000000;">
                         </div>
-
-
                     </form>
 
                     <?php
@@ -255,7 +258,40 @@
                     echo "<br>";
                     echo "<br>";
                     echo "<br>";
+
+                    // Database connection
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "Feedback";
+
+                    // Create connection
+                    $conn = new mysqli($servername, $username, $password, $dbname);
+                    // Check connection
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    }
+
+                    // Insert data into the database using prepared statements
+                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                        $email = $_POST['email'];
+                        $comment = $_POST['comment'];
+
+                        $stmt = $conn->prepare("INSERT INTO feedback (Email, Comment) VALUES (?, ?)");
+                        $stmt->bind_param("ss", $email, $comment);
+
+                        if ($stmt->execute()) {
+                            echo "New record created successfully <br><br><br>";
+                        } else {
+                            echo "Error: " . $stmt->error;
+                        }
+
+                        $stmt->close();
+                    }
+
+                    $conn->close();
                     ?>
+
                 </div>
 
                 <div class="hyperlink">

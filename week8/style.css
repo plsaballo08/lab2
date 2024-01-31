@@ -229,15 +229,3 @@ input[type="submit"]:hover {
     transition: background-color 0.3s;
 
 }
-
-#submit input[type="submit"] {
-    background-color: #000000;
-    border-radius: 30px;
-    padding: 13px 30px;
-    color: #000000;
-}
-
-.form-container input[type="submit"]:hover {
-    background-color: rgb(187, 21, 21);
-    cursor: pointer;
-}   
