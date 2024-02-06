@@ -259,20 +259,20 @@
                     echo "<br>";
                     echo "<br>";
 
-                    // Database connection
+
                     $servername = "localhost";
                     $username = "root";
                     $password = "";
                     $dbname = "Feedback";
 
-                    // Create connection
+
                     $conn = new mysqli($servername, $username, $password, $dbname);
-                    // Check connection
+
                     if ($conn->connect_error) {
                         die("Connection failed: " . $conn->connect_error);
                     }
 
-                    // Insert data into the database using prepared statements
+
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $email = $_POST['email'];
                         $comment = $_POST['comment'];
