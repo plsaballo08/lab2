@@ -114,19 +114,17 @@
   echo "<br>";
   ?>
 
-  
   <?php
-  //local
   //$servername = "localhost";
   //$username = "root";
   //$password = "";
   //$dbname = "myDB";
 
-  //socit
   $servername = "localhost";
-  $username = "webprogmi222_sf221";
+  $username = "webprogmi222_sf221 ";
   $password = "xE*Y2nleNVvZm[!!";
-  $dbname = "webprogmi222_sf221";
+  $dbname = "webprogmi222_sf221 ";
+
 
   // Create connection
   $conn = new mysqli($servername, $username, $password, $dbname);
@@ -136,7 +134,7 @@
 
 
   $sql = "INSERT INTO pcsaballo3_myguests (name, email, website, comment, gender)
-VALUES ('$name', '$email', '$website', '$comment', '$gender')";
+  VALUES ('$name', '$email', '$website', '$comment', '$gender')";
 
   if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
