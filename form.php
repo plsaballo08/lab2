@@ -114,12 +114,13 @@
   echo "<br>";
   ?>
 
-  //local
+  
   <?php
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "myDB";
+  //local
+  //$servername = "localhost";
+  //$username = "root";
+  //$password = "";
+  //$dbname = "myDB";
 
   //socit
   $servername = "localhost";
