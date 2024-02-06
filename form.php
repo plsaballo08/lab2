@@ -8,47 +8,54 @@
 <body>  
 
 <?php
-// define variables and set to empty values
+// PHP code for form validation and database insertion
+// Define variables and set them to empty values
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
 $name = $email = $gender = $comment = $website = "";
 
+// Check if the form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Validate the name field
   if (empty($_POST["name"])) {
     $nameErr = "Name is required";
   } else {
     $name = test_input($_POST["name"]);
-    // check if name only contains letters and whitespace
+    // Check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
       $nameErr = "Only letters and white space allowed";
     }
   }
   
+  // Validate the email field
   if (empty($_POST["email"])) {
     $emailErr = "Email is required";
   } else {
     $email = test_input($_POST["email"]);
-    // check if e-mail address is well-formed
+    // Check if email address is well-formed
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $emailErr = "Invalid email format";
     }
   }
     
+  // Validate the website field
   if (empty($_POST["website"])) {
     $website = "";
   } else {
     $website = test_input($_POST["website"]);
-    // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
+    // Check if URL address syntax is valid
     if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
       $websiteErr = "Invalid URL";
     }
   }
 
+  // Retrieve and sanitize the comment field
   if (empty($_POST["comment"])) {
     $comment = "";
   } else {
     $comment = test_input($_POST["comment"]);
   }
 
+  // Validate the gender field
   if (empty($_POST["gender"])) {
     $genderErr = "Gender is required";
   } else {
@@ -56,6 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 }
 
+// Function to sanitize input data
 function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
@@ -64,6 +72,7 @@ function test_input($data) {
 }
 ?>
 
+<!-- HTML form for user input -->
 <h2>PHP Form Validation Example</h2>
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
@@ -87,6 +96,7 @@ function test_input($data) {
   <input type="submit" name="submit" value="Submit">  
 </form>
 
+<!-- Displaying user input -->
 <?php
 echo "<h2>Your Input:</h2>";
 echo $name;
@@ -100,20 +110,13 @@ echo "<br>";
 echo $gender;
 ?>
 
-<?php
-// For Xampp Localhost
-//$servername = "localhost";
-//$username = "root";
-//$password = "";
-//$dbname = "myDB";
 
-// For socitcloud
+<?php
+// Database connection parameters
 $servername = "localhost";
 $username = "webprogmi222_sf221";
 $password = "xE*Y2nleNVvZm[!!";
 $dbname = "webprogmi222_sf221";
-
-
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -122,15 +125,18 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
+// SQL query for inserting data into the database
 $sql = "INSERT INTO pcsaballo3_myguests (name, email,website,comment,gender)
 VALUES ('$name', '$email','$website','$comment','$gender')";
 
+// Execute SQL query
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
+// Close database connection
 $conn->close();
 ?>
 
