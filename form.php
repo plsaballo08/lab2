@@ -120,8 +120,10 @@
   //$password = "";
   //$dbname = "myDB";
 
- 
-
+  $servername = "localhost";
+  $username = "webprogmi222_sf221";
+  $password = "xE*Y2nleNVvZm[!!";
+  $dbname = "webprogmi222_sf221";
 
   // Create connection
   $conn = new mysqli($servername, $username, $password, $dbname);
