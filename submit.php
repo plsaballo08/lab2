@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO pcsaballo3_myguests (name, email, website, comment, gender)
-VALUES ('$name', '$email', '$website', '$comment', '$gender')";
+VALUES ('hyewq', 'eqw', 'eqwe.com', 'eqweq', 'male')";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
