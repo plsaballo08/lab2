@@ -66,7 +66,7 @@ function test_input($data) {
 
 <h2>PHP Form Validation Example</h2>
 <p><span class="error">* required field</span></p>
-<form method="post" action="form.php">  
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Name: <input type="text" name="name" value="<?php echo $name;?>">
   <span class="error">* <?php echo $nameErr;?></span>
   <br><br>
@@ -115,7 +115,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO pcsaballo3_myguests (name, email, website, comment, gender)
-VALUES ('$name', '$email', '$website', '$comment', '$gender)";
+VALUES ('$name', '$email', '$website', '$comment', '$gender')";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
@@ -125,8 +125,6 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 ?>
-
-
 
 
 </body>
