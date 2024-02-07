@@ -12,6 +12,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
+} else {
+  echo "connection success";
 }
 
 $sql = "INSERT INTO pcsaballo3_myguests (name, email, website, comment, gender)
@@ -24,5 +26,5 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
-header("Location: form.php")
+//header("Location: form.php")
 ?>
